@@ -1,0 +1,25 @@
+instruction trace:
+at 00, add  r1,r0,f00f
+at 04, rot  r2,r1,1
+at 08, rot  r3,r1,4
+at 0c, rot  r4,r1,8
+at 10, rot  r5,r1,18
+at 14, mak  r6,r1,10
+at 18, ext  r7,r6,10
+at 1c, extu r8,r6,10
+at 20, halt
+  r0: 00000000  r8: 0000f00f  r10: 00000000  r18: 00000000
+  r1: 0000f00f  r9: 00000000  r11: 00000000  r19: 00000000
+  r2: 80007807  ra: 00000000  r12: 00000000  r1a: 00000000
+  r3: f0000f00  rb: 00000000  r13: 00000000  r1b: 00000000
+  r4: 0f0000f0  rc: 00000000  r14: 00000000  r1c: 00000000
+  r5: 00f00f00  rd: 00000000  r15: 00000000  r1d: 00000000
+  r6: f00f0000  re: 00000000  r16: 00000000  r1e: 00000000
+  r7: fffff00f  rf: 00000000  r17: 00000000  r1f: 00000000
+
+execution statistics (in decimal):
+  instruction fetches = 9
+  data words read     = 0
+  data words written  = 0
+  branches executed   = 0
+  branches taken      = 0

@@ -1,0 +1,83 @@
+instruction trace:
+at 00, br   2
+at 08, br   3ffffff (= decimal -1)
+at 04, br   2
+at 0c, add  r1,r0,1
+at 10, rot  r2,r1,1
+at 14, sub  r3,r0,1
+at 18, add  r4,r0,abcd
+at 1c, sub  r5,r0,abcd
+at 20, bcnd never,r1,2
+at 24, add  r6,r6,1
+at 28, bcnd gt0,r1,2
+at 30, bcnd eq0,r1,2
+at 34, add  r8,r8,1
+at 38, bcnd ge0,r1,2
+at 40, bcnd mask=8,r1,2
+at 44, add  ra,ra,1
+at 48, bcnd lt0,r1,2
+at 4c, add  rb,rb,1
+at 50, bcnd ne0,r1,2
+at 58, bcnd le0,r1,1
+at 5c, add  rd,rd,1
+at 60, bcnd always,r1,2
+at 68, bcnd eq0,r0,2
+at 70, bcnd gt0,r2,2
+at 74, add  r10,r10,1
+at 78, bcnd eq0,r2,2
+at 7c, add  r11,r11,1
+at 80, bcnd ge0,r2,2
+at 84, add  r12,r12,1
+at 88, bcnd mask=8,r2,2
+at 90, bcnd lt0,r2,2
+at 98, bcnd ne0,r2,2
+at a0, bcnd le0,r2,2
+at a8, bcnd gt0,r3,2
+at ac, add  r10,r10,10
+at b0, bcnd eq0,r3,2
+at b4, add  r11,r11,10
+at b8, bcnd ge0,r3,2
+at bc, add  r12,r12,10
+at c0, bcnd mask=8,r3,2
+at c4, add  r13,r13,10
+at c8, bcnd lt0,r3,2
+at d0, bcnd ne0,r3,2
+at d8, bcnd le0,r3,2
+at e0, bcnd gt0,r4,2
+at e8, bcnd eq0,r4,2
+at ec, add  r11,r11,100
+at f0, bcnd ge0,r4,2
+at f8, bcnd mask=8,r4,2
+at fc, add  r13,r13,100
+at 100, bcnd lt0,r4,2
+at 104, add  r14,r14,100
+at 108, bcnd ne0,r4,2
+at 110, bcnd le0,r4,2
+at 114, add  r16,r16,100
+at 118, bcnd gt0,r5,2
+at 11c, add  r10,r10,1000
+at 120, bcnd eq0,r5,2
+at 124, add  r11,r11,1000
+at 128, bcnd ge0,r5,2
+at 12c, add  r12,r12,1000
+at 130, bcnd mask=8,r5,2
+at 134, add  r13,r13,1000
+at 138, bcnd lt0,r5,2
+at 140, bcnd ne0,r5,2
+at 148, bcnd le0,r5,2
+at 150, halt
+  r0: 00000000  r8: 00000001  r10: 00001011  r18: 00000000
+  r1: 00000001  r9: 00000000  r11: 00001111  r19: 00000000
+  r2: 80000000  ra: 00000001  r12: 00001011  r1a: 00000000
+  r3: ffffffff  rb: 00000001  r13: 00001110  r1b: 00000000
+  r4: 0000abcd  rc: 00000000  r14: 00000100  r1c: 00000000
+  r5: ffff5433  rd: 00000001  r15: 00000000  r1d: 00000000
+  r6: 00000001  re: 00000000  r16: 00000100  r1e: 00000000
+  r7: 00000000  rf: 00000000  r17: 00000000  r1f: 00000000
+
+execution statistics (in decimal):
+  instruction fetches = 67
+  data words read     = 0
+  data words written  = 0
+  branches executed   = 41
+  branches taken      = 21 (51.2%)
