@@ -1,0 +1,12 @@
+execution statistics (in decimal):
+  instruction fetches = 1049
+  data words read     = 230
+  data words written  = 20
+  branches executed   = 250
+  branches taken      = 247 (98.8%)
+cache statistics (in decimal):
+  cache reads       = 230
+  cache writes      = 20
+  cache hits        = 145
+  cache misses      = 105
+  cache write backs = 0
